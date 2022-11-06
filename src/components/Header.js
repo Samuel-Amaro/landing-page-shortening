@@ -2,6 +2,7 @@ import logo from "../images/logo.svg";
 import Button from "./Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import "./Header.css";
 
 export default function Header() {
     return (
@@ -62,11 +63,18 @@ export default function Header() {
               Sign Up
             </Button>
           </div>
-          <button type="button" className="header__Btn-Menu" title="Expanded Menu" aria-expanded="true">
+          <button
+            type="button"
+            className="header__Btn-Menu"
+            title="Expanded Menu"
+            aria-expanded="true"
+          >
             <FontAwesomeIcon icon={faBars} className="header__Icon-Btn-Menu" />
           </button>
         </div>
         <div className="header__Group">
+          <div
+            className="header__Ilustration" aria-hidden="true"></div>
           <section className="header__Content" aria-label="Content header">
             <h1 className="header__Title">More than just shorter links</h1>
             <p className="header__description">
@@ -77,10 +85,6 @@ export default function Header() {
               Get Started
             </Button>
           </section>
-          <div
-            className="header__Ilustration"
-            aria-hidden="true">
-          </div>
         </div>
         <form
           action=""

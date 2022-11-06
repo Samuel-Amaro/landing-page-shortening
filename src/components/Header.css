@@ -1,0 +1,44 @@
+.Nav,
+.header__Buttons {
+  display: none;
+}
+
+.header__Logo {
+  display: block;
+  max-width: 100%;
+}
+
+.Header {
+  padding: 2.2rem 0 0 0;
+}
+
+.header__Group:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  margin-bottom: 22px;
+}
+
+.header__Btn-Menu {
+  appearance: none;
+  border: none;
+  display: flex;
+  font-size: 1.51rem;
+  background-color: transparent;
+}
+
+.header__Icon-Btn-Menu {
+  color: #9c9aa5;
+}
+
+
+.header__Ilustration{
+    background-image: url(../images/illustration-working.svg);
+    background-repeat: no-repeat;
+    background-position: 20px top;
+    background-size: 510px 336px;
+    width: 100%;
+    height: 340px;
+}
+
