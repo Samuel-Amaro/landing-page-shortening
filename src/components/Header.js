@@ -3,43 +3,47 @@ import Button from "./Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
-import React, {useRef, useState, useEffect} from "react";
+import React, {useRef, useState} from "react";
 
 export default function Header() {
     const nav = useRef(null);
+    const liItemFocused = useRef(null);
+    const btnMenu = useRef(null);
     const [btnIsPressed, setBtnIsPressed] = useState(false);
     const [classNamesNav, setClassNameNav] = useState(
-      "header__Container  header__Container_Collapse"
+      "header__Container-Collapse header__Container"
     );
 
-    useEffect(() => {
-      /*
-      if(btnIsPressed === false && nav.current.classList.contains("header__Container_Show")) {
-        nav.current.classList.remove(
-          ...["header__Container_Collapse", "header__Container_Show"]
-        );
-        nav.current.classList.add("header__Container_Collapsing");
-      }
-      */
-    });
+    function focusItem() {
+      btnMenu.current.blur();
+      liItemFocused.current.focus();
+    }
 
     function handleTransitionEnd(event) {
        if(btnIsPressed) {
-        nav.current.style.removeProperty("height");
-        setClassNameNav("header__Container header__Container_Collapse header__Container_Show");
+        setClassNameNav(
+          "header__Container header__Container-Collapse header__Container_Show"
+        );
        }else{
-         setClassNameNav("header__Container  header__Container_Collapse");
+         setClassNameNav("header__Container  header__Container-Collapse");
+         nav.current.style.removeProperty("height");
        }
     }
 
     function handleBtnMenu() {
       setBtnIsPressed(previosState => {
-        setClassNameNav("header__Container header__Container_Collapsing");
         if(!previosState) {
            setTimeout(() => {
-             nav.current.style.height = "383.1px";
+            nav.current.style.height = "383.1px";
            });
+        }else{
+          setTimeout(() => {
+            nav.current.style.height = "0px";
+          });
         }
+        setClassNameNav(
+          "header__Container header__Container_Collapsing"
+        );
         return !previosState;
       });
     }
@@ -53,12 +57,8 @@ export default function Header() {
             className="header__Logo"
           />
           <div
-            className={
-              /*btnIsPressed
-                ? "header__Container header__Container_Collapsing"
-                : "header__Container  header__Container_Collapse"*/
-                classNamesNav
-            }
+            aria-label="menu navigation with links"
+            className={classNamesNav}
             ref={nav}
             onTransitionEnd={handleTransitionEnd}
           >
@@ -67,7 +67,7 @@ export default function Header() {
                 className="nav__List-Links"
                 aria-label="List from links navigation"
               >
-                <li className="nav__item">
+                <li className="nav__item" key="linkA" ref={liItemFocused} tabIndex="0" onFocus={(event) => console.log("Recebeu o foco")}>
                   <a
                     href="#features"
                     target="_self"
@@ -78,7 +78,7 @@ export default function Header() {
                     Features
                   </a>
                 </li>
-                <li className="nav__item">
+                <li className="nav__item" key="linkB">
                   <a
                     href="#pricing"
                     target="_self"
@@ -89,7 +89,7 @@ export default function Header() {
                     Pricing
                   </a>
                 </li>
-                <li className="nav__item">
+                <li className="nav__item" key="linkC">
                   <a
                     href="#resources"
                     target="_self"
@@ -121,6 +121,16 @@ export default function Header() {
             title="Expanded Menu"
             aria-expanded={btnIsPressed ? "false" : "true"}
             onPointerDown={handleBtnMenu}
+            onKeyDown={(event) => {
+              if (event.code === "Enter") {
+                handleBtnMenu();
+                //gerencia o foco, espera o menu ser pintado e aplica o foco programaticamente
+                setTimeout(() => {
+                  focusItem();
+                }, 100);
+              }
+            }}
+            ref={btnMenu}
           >
             <FontAwesomeIcon icon={faBars} className="header__Icon-Btn-Menu" />
           </button>
@@ -133,9 +143,9 @@ export default function Header() {
               Build your brand’s recognition and get detailed insights on how
               your links are performing.
             </p>
-            <Button type="button" className="header__btn" title="Get Started">
+            <button type="button" className="header__btn" title="Get Started">
               Get Started
-            </Button>
+            </button>
           </section>
         </div>
         <form
@@ -151,13 +161,13 @@ export default function Header() {
               className="form__Input"
               aria-label="Shorten a link here..."
             />
-            <Button
+            <button
               type="submit"
               className="form__btn"
               title="Submite url to shorten"
             >
               Shorten It!
-            </Button>
+            </button>
           </div>
         </form>
       </header>

@@ -1,0 +1,25 @@
+.container__Section {
+  background-color: #f0f1f6;
+  padding: 9.5rem 0 0 0;
+}
+
+.section__Title {
+  font-weight: 700;
+  color: var(--very-dark-blue);
+  letter-spacing: -1.5px;
+  margin-bottom: 12px;
+  line-height: 1.15;
+  font-size: 1.55rem;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.section__Description{
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--grayish-violet);
+    line-height: 1.73;
+    padding: 0 12px;
+    text-align: center;
+}
