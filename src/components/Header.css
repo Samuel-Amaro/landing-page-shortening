@@ -1,7 +1,6 @@
-.Nav,
-.header__Buttons {
+/*.header__Container {
   display: none;
-}
+}*/
 
 .header__Logo {
   display: block;
@@ -18,20 +17,25 @@
   align-items: center;
   flex-flow: row wrap;
   margin-bottom: 22px;
+  padding: 0 22px 0 23.5px;
+  position: relative;
+}
+
+.header__btn, .header__Btn-Menu{
+  appearance: none;
+  border: none;
 }
 
 .header__Btn-Menu {
-  appearance: none;
-  border: none;
   display: flex;
   font-size: 1.51rem;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .header__Icon-Btn-Menu {
   color: #9c9aa5;
 }
-
 
 .header__Ilustration{
     background-image: url(../images/illustration-working.svg);
@@ -40,5 +44,98 @@
     background-size: 510px 336px;
     width: 100%;
     height: 340px;
+    margin-bottom: 2.2rem;
 }
 
+.header__Title{
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.33rem;
+  color: var(--very-dark-blue);
+  text-align: center;
+  letter-spacing: -0.95px;
+  max-width: 375px;
+  margin-bottom: 12px;
+}
+
+.header__description{
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--grayish-violet);
+  text-align: center;
+  padding: 0 15px 0 15px;
+  line-height: 1.65;
+  width: 375px;
+}
+
+.header__Container_Collapse:not(.header__Container_Show){
+  display: none;
+}
+
+.header__Container_Collapsing{
+  height: 0;
+  overflow: hidden;
+  transition: height 5s ease;
+}
+
+.header__Container{
+  position: absolute;/*in relation a header__group:first-child*/
+  background-color: var(--dark-violet);
+  max-width: 329.5px;
+  width: 100%;
+  top: 56px;
+  z-index: 1000;
+  padding: 0 24px 0 24px;
+  border-radius: 10px;
+}
+
+
+.header__Buttons{
+  padding: 31px 0 40px 0;
+}
+
+.nav__List-Links{
+  list-style: none;
+}
+
+.nav__Link{
+  display: block;
+  text-decoration: none;
+  color: #FFFEFF;
+  font-weight: 700;
+  font-size: 1rem;
+  font-style: normal;
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.nav__item:last-child .nav__Link{
+  margin-bottom: 34px;
+}
+
+.Nav{
+  padding: 43px 0 0 0;
+  border-bottom: 1px solid hsla(300, 100%, 100%, 0.2);
+}
+
+.header__btn{
+  display: block;
+  color: #FFFEFF;
+  font-weight: 700;
+  font-size: 1rem;
+  font-style: normal;
+  background-color: transparent;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.header__btn:first-child{
+  margin: 0 auto 25px auto;
+}
+
+.header__btn:last-child{
+  background-color: var(--cyan);
+  padding: 11px 0 10px 0;
+  width: 100%;
+  border-radius: 45px;
+}
