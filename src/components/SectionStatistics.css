@@ -3,7 +3,7 @@
   padding: 9.5rem 0 80px 0;
 }
 
-.section__Title {
+.container__Title {
   font-weight: 700;
   color: var(--very-dark-blue);
   letter-spacing: -1.5px;
@@ -14,7 +14,7 @@
   text-align: center;
 }
 
-.section__Description{
+.container__Description{
     font-size: 0.9rem;
     font-weight: 500;
     font-style: normal;
@@ -26,10 +26,19 @@
     margin: 0 auto 90px auto;
 }
 
-.section__Connection-Bar{
+.container__Connection-Bar{
   display: block;
   background-color: var(--cyan);
   height: 92px;
   width: 8px;
   margin: 0 auto;
+}
+
+/*******************LIST FROM SHORTENED URLS*************/
+.container__List-Urls-Shortened{
+  list-style: none;
+}
+
+.container__Item-Shortened:nth-child(-n+2){
+  margin-bottom: 15px;
 }

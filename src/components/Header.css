@@ -163,6 +163,7 @@
   margin-bottom: 88px;
 }*/
 
+/************FORM***************/
 .Form{
   display: block;
   padding: 0;
@@ -210,3 +211,30 @@
 .form__btn:is(:hover, :focus) {
   background-color: #9BE2E2;
 }
+
+.form__Input:invalid::placeholder{
+  color: var(--red);
+}
+
+.form__Input_Invalid, .form__Input:invalid{
+  border: 3px solid #C1768A;
+  padding: 9px 0 9px 16px;
+}
+
+.form__Input_Invalid{
+  margin-bottom: 0px;
+}
+
+.form__Input:invalid{
+  margin-bottom: 6px;
+}
+
+.form__Label-Warning{
+  display: block;
+  font-size: 0.67rem;
+  color: #C1768A;
+  font-style: italic;
+  margin-bottom: 17px;
+  font-weight: 700;
+}
+

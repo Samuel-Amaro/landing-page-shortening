@@ -5,14 +5,14 @@
     background-color: var(--dark-violet);
 }
 
-.container__Section-Boost .section__Title{
+.container__Section-Boost .container__Title{
     font-weight: 700;
     font-size: 1.55rem;
     color: #FFFFFD;
     margin-bottom: 21px;
 }
 
-.section__btn{
+.container__btn{
     display: block;
     margin: 0 auto;
     appearance: none;
@@ -27,6 +27,6 @@
     cursor: pointer;
 }
 
-.section__btn:is(:hover, :focus){
+.container__btn:is(:hover, :focus){
     background-color: #9BE2E2;
 }

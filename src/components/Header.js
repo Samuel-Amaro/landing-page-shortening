@@ -1,5 +1,4 @@
 import logo from "../images/logo.svg";
-import Button from "./Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
@@ -10,6 +9,7 @@ export default function Header() {
     const liItemFocused = useRef(null);
     const btnMenu = useRef(null);
     const [btnIsPressed, setBtnIsPressed] = useState(false);
+    const [valueInput, setValueInput] = useState('');
     const [classNamesNav, setClassNameNav] = useState(
       "header__Container-Collapse header__Container"
     );
@@ -48,6 +48,15 @@ export default function Header() {
       });
     }
 
+    function handleChangeInput(event) {
+      setValueInput(event.target.value);
+    }
+
+    function handleSubmitForm(event) {
+      event.preventDefault();
+      alert('Form submited with value input: ' + valueInput);
+    }
+
     return (
       <header className="Header">
         <div className="header__Group">
@@ -67,7 +76,13 @@ export default function Header() {
                 className="nav__List-Links"
                 aria-label="List from links navigation"
               >
-                <li className="nav__item" key="linkA" ref={liItemFocused} tabIndex="0" onFocus={(event) => console.log("Recebeu o foco")}>
+                <li
+                  className="nav__item"
+                  key="linkA"
+                  ref={liItemFocused}
+                  tabIndex="0"
+                  onFocus={(event) => console.log("Recebeu o foco")}
+                >
                   <a
                     href="#features"
                     target="_self"
@@ -153,14 +168,20 @@ export default function Header() {
           name="form"
           className="Form"
           aria-label="Form from shorten a link here"
+          onSubmit={event => handleSubmitForm(event)}
         >
           <div className="form__Group">
             <input
               type="url"
               placeholder="Shorten a link here..."
               className="form__Input"
-              aria-label="Shorten a link here..."
+              aria-label="Shorten a link here... enter a url formatted like: 'urlscheme://restofurl"
+              title="Please enter a url formatted like: 'urlscheme://restofurl'"
+              value={valueInput}
+              onChange={event => handleChangeInput(event)}
             />
+            {/*se o input estiver vazio add o alert*/}
+            {/*<span className="form__Label-Warning">Please add a link</span>*/}
             <button
               type="submit"
               className="form__btn"

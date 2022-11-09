@@ -1,0 +1,7 @@
+.Result-Shortened-Url{
+    background-color: white;
+}
+
+.result-shortened-url__Old-Url, .result-shortened-url__Url-Shortened, .result-shortened-url__Btn{
+    display: block;
+}
