@@ -3,6 +3,7 @@ import iconFacebook from "../images/icon-facebook.svg";
 import iconInstagram from "../images/icon-instagram.svg";
 import iconPinterest from "../images/icon-pinterest.svg";
 import iconTwitter from "../images/icon-twitter.svg";
+import "./Footer.css";
 
 export default function Footer() {
     return (
@@ -10,7 +11,7 @@ export default function Footer() {
         <img className="footer__Logo" src={logo} alt="" aria-hidden="true" />
         <div className="footer__Navs">
           <div className="footer__Block-Nav">
-            <b className="footer__Associated-Link">Features</b>
+            <span className="footer__Associated-Link">Features</span>
             <nav className="footer__Nav" aria-label="Navigation Features">
               <ul
                 className="footer__List-Links-Navigation"
@@ -50,7 +51,7 @@ export default function Footer() {
             </nav>
           </div>
           <div className="footer__Block-Nav">
-            <b className="footer__Associated-Link">Resources</b>
+            <span className="footer__Associated-Link">Resources</span>
             <nav className="footer__Nav" aria-label="Navigation Features">
               <ul
                 className="footer__List-Links-Navigation"
@@ -90,7 +91,7 @@ export default function Footer() {
             </nav>
           </div>
           <div className="footer__Block-Nav">
-            <b className="footer__Associated-Link">Company</b>
+            <span className="footer__Associated-Link">Company</span>
             <nav className="footer__Nav" aria-label="Navigation Features">
               <ul
                 className="footer__List-Links-Navigation"

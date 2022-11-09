@@ -1,4 +1,4 @@
-import Button from "./Button";
+import "./ShortenedUrl.css";
 
 export default function ShortenedUrl(props) {
     return (
@@ -8,7 +8,7 @@ export default function ShortenedUrl(props) {
         <span className="result-shortened-url__Url-Shortened">
           {props.urlShortened}
         </span>
-        <Button type="button" className="result-shortened-url__Btn" title="Copy new url shortened">Copy</Button>
+        <button type="button" className="result-shortened-url__Btn" title="Copy new url shortened">Copy</button>
       </div>
     );
 }

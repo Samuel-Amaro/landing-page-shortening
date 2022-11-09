@@ -7,7 +7,7 @@ import "./SectionStatistics.css";
 export default function SectionStatistics() {
     return (
       <section
-        className="container__Section"
+        className="container__Section-Statistics"
         aria-label="Section Advanced Statistics"
       >
         <div className="section__Content">

@@ -1,6 +1,6 @@
-.container__Section {
+.container__Section-Statistics {
   background-color: #f0f1f6;
-  padding: 9.5rem 0 0 0;
+  padding: 9.5rem 0 80px 0;
 }
 
 .section__Title {
@@ -22,4 +22,14 @@
     line-height: 1.73;
     padding: 0 12px;
     text-align: center;
+    max-width: 375px;
+    margin: 0 auto 90px auto;
+}
+
+.section__Connection-Bar{
+  display: block;
+  background-color: var(--cyan);
+  height: 92px;
+  width: 8px;
+  margin: 0 auto;
 }

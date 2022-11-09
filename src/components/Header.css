@@ -69,7 +69,7 @@
   text-align: center;
   padding: 0 15px 0 15px;
   line-height: 1.65;
-  width: 375px;
+  max-width: 375px;
   margin-bottom: 31px;
 }
 
