@@ -23,6 +23,11 @@ export default function ShortenedUrl(props) {
           }
           title="Copy new url shortened"
           onPointerDown={handleBtn}
+          onKeyDown={event => {
+            if(event.code === "Enter") {
+              handleBtn();
+            }
+          }}
         >
           {btnIsPressed ? "Copied!" : "Copy"}
         </button>

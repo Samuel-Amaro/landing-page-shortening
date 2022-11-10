@@ -4,11 +4,11 @@
   padding: 5.75rem 0 80px 0;
 }
 
-.container__Section-Statistics .container__Content{
+.container__Section-Statistics .container__Content {
   padding: 3.8rem 0 0 0;
 }
 
-.container__Section-Statistics_Padding-0{
+.container__Section-Statistics_Padding-0 {
   padding: 0 0 80px 0;
 }
 
@@ -23,19 +23,19 @@
   text-align: center;
 }
 
-.container__Description{
-    font-size: 0.9rem;
-    font-weight: 500;
-    font-style: normal;
-    color: var(--grayish-violet);
-    line-height: 1.73;
-    padding: 0 12px;
-    text-align: center;
-    max-width: 375px;
-    margin: 0 auto 90px auto;
+.container__Description {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--grayish-violet);
+  line-height: 1.73;
+  padding: 0 12px;
+  text-align: center;
+  max-width: 375px;
+  margin: 0 auto 90px auto;
 }
 
-.container__Connection-Bar{
+.container__Connection-Bar {
   display: block;
   background-color: var(--cyan);
   height: 92px;
@@ -44,11 +44,59 @@
 }
 
 /*******************LIST FROM SHORTENED URLS*************/
-.container__List-Urls-Shortened{
+.container__List-Urls-Shortened {
   list-style: none;
   margin-bottom: 1.21rem;
 }
 
-.container__Item-Shortened:nth-child(-n+2){
+.container__Item-Shortened:nth-child(-n + 2) {
   margin-bottom: 24px;
+}
+
+.container__Cards {
+  padding: 0 24px;
+}
+
+@media screen and (min-width: 376px) {
+  .container__Description {
+    max-width: 483px;
+  }
+
+  .container__Cards {
+    padding: 0 0;
+  }
+}
+
+/*TODO: arrumar a section statistics dos cards com grid layout*/
+@media screen and (min-width: 780px){
+  .Card:nth-child(1){
+    grid-area: a;
+  }
+
+  .container__Connection-Bar:nth-child(2){
+    grid-area: b;
+  }
+  
+  .Card:nth-child(3){
+    grid-area: c;
+  }
+
+  .container__Connection-Bar:nth-child(4){
+    grid-area: d;
+  }
+
+  .Card:nth-child(5){
+    grid-area: e;
+  }
+
+  .container__Cards{
+    display: grid;
+    grid-template-columns: 350px 92px 350px;
+    grid-template-rows: 266px 92px 266px;
+    grid-template-areas: 
+      "a b c"
+      ". . d"
+      ". . e";
+    justify-content: center;
+  }
 }
