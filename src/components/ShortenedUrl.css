@@ -1,7 +1,58 @@
 .Result-Shortened-Url{
     background-color: white;
+    max-width: 327px;
+    margin: 0 auto;
+    padding: 0 0 16px 0;
+    border-radius: 5px;
 }
 
 .result-shortened-url__Old-Url, .result-shortened-url__Url-Shortened, .result-shortened-url__Btn{
     display: block;
+}
+
+.result-shortened-url__Old-Url, .result-shortened-url__Url-Shortened{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 16px 16px 13.5px 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.result-shortened-url__Url-Shortened:nth-child(2){
+    padding: 16px 16px 15px 16px;
+}
+
+.result-shortened-url__Old-Url{
+    color: var(--very-dark-blue);
+    border-bottom: 1px solid #F0F1F6;
+}
+
+.result-shortened-url__Url-Shortened{
+    color: var(--cyan);
+}
+
+.result-shortened-url__Btn{
+    appearance: none;
+    border: none;
+    background-color: var(--cyan);
+    color: white;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 9px 0 8px 0;
+    width: 91%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.result-shortened-url__Btn:is(:hover, :focus){
+    background-color: #9BE2E2;
+}
+
+.result-shortened-url__Btn_Bg--Dark-Violet{
+    transition: background-color 0.25s ease;
+    background-color: var(--dark-violet);
 }

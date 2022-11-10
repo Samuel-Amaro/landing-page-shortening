@@ -11,20 +11,20 @@ export default function SectionStatistics() {
         className="container__Section-Statistics"
         aria-label="Section Advanced Statistics"
       >
-        {/*<ul className="container__List-Urls-Shortened">
-          <li className="container__Item-Shortened">
+        {/*<ul className="container__List-Urls-Shortened" aria-label="List from Urls shortened">
+          <li className="container__Item-Shortened" key="idTeste1">
+            <ShortenedUrl
+              oldUrl="https://www.frontendmentor.io/company"
+              urlShortened="https://rel.ink/k41Kyk"
+            />
+          </li>
+          <li className="container__Item-Shortened" key="idTeste2">
             <ShortenedUrl
               oldUrl="https://www.frontendmentor.io"
               urlShortened="https://rel.ink/k41Kyk"
             />
           </li>
-          <li className="container__Item-Shortened">
-            <ShortenedUrl
-              oldUrl="https://www.frontendmentor.io"
-              urlShortened="https://rel.ink/k41Kyk"
-            />
-          </li>
-          <li className="container__Item-Shortened">
+          <li className="container__Item-Shortened" key="idTeste3">
             <ShortenedUrl
               oldUrl="https://www.frontendmentor.io"
               urlShortened="https://rel.ink/k41Kyk"

@@ -222,12 +222,6 @@
   margin-bottom: 6px;
 }
 
-/*
-.form__Input:invalid{
-  margin-bottom: 6px;
-}
-*/
-
 .form__Label-Warning{
   display: block;
   font-size: 0.67rem;

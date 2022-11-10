@@ -1,6 +1,15 @@
 .container__Section-Statistics {
   background-color: #f0f1f6;
-  padding: 9.5rem 0 80px 0;
+  /*padding: 9.5rem 0 80px 0;*/
+  padding: 5.75rem 0 80px 0;
+}
+
+.container__Section-Statistics .container__Content{
+  padding: 3.8rem 0 0 0;
+}
+
+.container__Section-Statistics_Padding-0{
+  padding: 0 0 80px 0;
 }
 
 .container__Title {
@@ -37,8 +46,9 @@
 /*******************LIST FROM SHORTENED URLS*************/
 .container__List-Urls-Shortened{
   list-style: none;
+  margin-bottom: 1.21rem;
 }
 
 .container__Item-Shortened:nth-child(-n+2){
-  margin-bottom: 15px;
+  margin-bottom: 24px;
 }
