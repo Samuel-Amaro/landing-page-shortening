@@ -13,6 +13,7 @@ export default function Header() {
     const [classNamesNav, setClassNameNav] = useState(
       "header__Container-Collapse header__Container"
     );
+    const [formIsValid, setFormIsValid] = useState(true);
 
     function focusItem() {
       btnMenu.current.blur();
@@ -54,7 +55,13 @@ export default function Header() {
 
     function handleSubmitForm(event) {
       event.preventDefault();
-      alert('Form submited with value input: ' + valueInput);
+      if (valueInput === "") {
+        setFormIsValid(false);
+      }
+
+      if(valueInput !== "" && valueInput.length > 0) {
+        setFormIsValid(true);
+      }
     }
 
     return (
@@ -168,20 +175,28 @@ export default function Header() {
           name="form"
           className="Form"
           aria-label="Form from shorten a link here"
-          onSubmit={event => handleSubmitForm(event)}
+          onSubmit={(event) => handleSubmitForm(event)}
         >
           <div className="form__Group">
             <input
               type="url"
               placeholder="Shorten a link here..."
-              className="form__Input"
+              className={
+                formIsValid === false
+                  ? "form__Input form__Input_Invalid"
+                  : "form__Input"
+              }
               aria-label="Shorten a link here... enter a url formatted like: 'urlscheme://restofurl"
               title="Please enter a url formatted like: 'urlscheme://restofurl'"
               value={valueInput}
-              onChange={event => handleChangeInput(event)}
+              onChange={(event) => handleChangeInput(event)}
             />
             {/*se o input estiver vazio add o alert*/}
-            {/*<span className="form__Label-Warning">Please add a link</span>*/}
+            {formIsValid ? (
+              ""
+            ) : (
+              <span className="form__Label-Warning" role="alert">Please add a link</span>
+            )}
             <button
               type="submit"
               className="form__btn"

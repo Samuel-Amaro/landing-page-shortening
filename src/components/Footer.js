@@ -1,8 +1,6 @@
 import logo from "../images/logo-white.svg";
-import iconFacebook from "../images/icon-facebook.svg";
-import iconInstagram from "../images/icon-instagram.svg";
-import iconPinterest from "../images/icon-pinterest.svg";
-import iconTwitter from "../images/icon-twitter.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSquareFacebook, faTwitter, faPinterest, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import "./Footer.css";
 
 export default function Footer() {
@@ -155,7 +153,10 @@ export default function Footer() {
                 className="footer__Link-Social-Media"
                 aria-label="Link to social media facebook"
               >
-                <img src={iconFacebook} alt="" aria-hidden="true" />
+                <FontAwesomeIcon
+                  icon={faSquareFacebook}
+                  className="footer__Icon-Link"
+                />
               </a>
             </li>
             <li className="footer__Item-Social">
@@ -167,7 +168,10 @@ export default function Footer() {
                 className="footer__Link-Social-Media"
                 aria-label="Link to social media twitter"
               >
-                <img src={iconTwitter} alt="" aria-hidden="true" />
+                <FontAwesomeIcon
+                  icon={faTwitter}
+                  className="footer__Icon-Link"
+                />
               </a>
             </li>
             <li className="footer__Item-Social">
@@ -179,7 +183,10 @@ export default function Footer() {
                 className="footer__Link-Social-Media"
                 aria-label="Link to social media pinterest"
               >
-                <img src={iconPinterest} alt="" aria-hidden="true" />
+                <FontAwesomeIcon
+                  icon={faPinterest}
+                  className="footer__Icon-Link"
+                />
               </a>
             </li>
             <li className="footer__Item-Social">
@@ -191,7 +198,10 @@ export default function Footer() {
                 className="footer__Link-Social-Media"
                 aria-label="Link to social media instagram"
               >
-                <img src={iconInstagram} alt="" aria-hidden="true" />
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  className="footer__Icon-Link"
+                />
               </a>
             </li>
           </ul>
