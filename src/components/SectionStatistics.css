@@ -67,7 +67,7 @@
   }
 }
 
-/*TODO: arrumar a section statistics dos cards com grid layout*/
+/*TODO: arrumar a section statistics dos cards com grid layout
 @media screen and (min-width: 780px){
   .Card:nth-child(1){
     grid-area: a;
@@ -100,3 +100,4 @@
     justify-content: center;
   }
 }
+*/

@@ -22,6 +22,7 @@ export default function Header() {
 
     function handleTransitionEnd(event) {
        if(btnIsPressed) {
+         nav.current.style.removeProperty("height");
         setClassNameNav(
           "header__Container header__Container-Collapse header__Container_Show"
         );
@@ -30,6 +31,16 @@ export default function Header() {
          nav.current.style.removeProperty("height");
        }
     }
+
+    window.addEventListener("resize", (event) => {
+      if(event.target.innerWidth >= 780 && btnIsPressed){
+        nav.current.style.removeProperty("height");
+      }
+
+      if (event.target.innerWidth < 780 && btnIsPressed) {
+        nav.current.style.height = "383.1px";
+      }
+    });
 
     function handleBtnMenu() {
       setBtnIsPressed(previosState => {
@@ -87,7 +98,6 @@ export default function Header() {
                   className="nav__item"
                   key="linkA"
                   ref={liItemFocused}
-                  tabIndex="0"
                   onFocus={(event) => console.log("Recebeu o foco")}
                 >
                   <a
@@ -173,7 +183,7 @@ export default function Header() {
         <form
           action=""
           name="form"
-          className="Form"
+          className={formIsValid === false ? "Form Form_Invalid" : "Form"}
           aria-label="Form from shorten a link here"
           onSubmit={(event) => handleSubmitForm(event)}
         >
