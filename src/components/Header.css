@@ -245,6 +245,7 @@
 }
 
 @media screen and (min-width: 780px) {
+  /***********menu navigation********************/
   .Header {
     padding: 3.03rem 0 9.34rem 0;
   }
@@ -257,7 +258,7 @@
     padding: 0;
     position: static;
     max-width: 1108px;
-    margin: 0 auto 22px auto;
+    margin: 0 auto 78.5px auto;
     padding: 0 20px;
   }
 
@@ -372,7 +373,7 @@
     display: grid;
     grid-template-columns: minmax(min-content, 769px) minmax(min-content, 190px);
     column-gap: 23px;
-    grid-template-areas: 
+    grid-template-areas:
       "a b"
       "c .";
     align-items: flex-start;
@@ -383,7 +384,6 @@
     padding: 19px 32px 15px 32px;
     margin-bottom: 0px;
     border-radius: 6px;
-    /*flex: 0.85 0.85 auto;*/
     grid-area: a;
   }
 
@@ -391,8 +391,6 @@
     padding: 17px 0 17px 0;
     border-radius: 6px;
     font-size: 1.1rem;
-    /*flex: 3.65 3.65 auto;*/
-    /*max-width: 190px;*/
     text-align: center;
     grid-area: b;
   }
@@ -413,13 +411,65 @@
     grid-area: c;
   }
 
-  .Form_Invalid{
+  .Form_Invalid {
     padding: 52px 63px 24px 63px;
+  }
+
+  /*******************************content**************************/
+
+  /*TODO: encontrar melhor forma de centralizar o grid conteiner apos passar os 1440px*/
+  .header__Ilustration {
+    grid-area: a;
+    background-position: left center;
+    background-size: auto;/*contain*/
+    width: 100%;
+    height: 480px;
+    margin-bottom: 20px;
+  }
+
+  .header__Content {
+    grid-area: b;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .header__Title {
+    font-size: 4.45rem;
+    text-align: left;
+    letter-spacing: -2px;
+    max-width: 580px;
+    line-height: 1.12;
+    margin: 0 0 0px 0;
+  }
+
+  .header__description {
+    font-size: 1.21rem;
+    text-align: left;
+    padding: 0;
+    max-width: 520px;
+    margin: 0 0 36px 0;
+  }
+
+  .header__Content .header__btn {
+    margin: 0;
   }
 }
 
 @media screen and (min-width: 1128px) {
   .header__Group:first-of-type {
     padding: 0;
+  }
+
+  .header__Ilustration {
+    margin-bottom: 0px;
+  }
+
+  .header__Group:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "b a";
+    align-items: center;
+    column-gap: 35px;
+    margin: 0 0 0 139px;
   }
 }
