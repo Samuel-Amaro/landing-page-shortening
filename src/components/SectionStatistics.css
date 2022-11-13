@@ -101,7 +101,7 @@
   .container__Connection-Bar:nth-child(2) {
     height: 8px;
     width: 30px;
-    margin: auto 0;
+    margin: 148px 0 0 0;
   }
 
   .container__Connection-Bar:nth-child(4) {
@@ -110,8 +110,12 @@
   }
 
   .container__Section-Statistics {
-    padding: 7.55rem 0 208px 0;
+    padding: 5.75rem 0 208px 0;
   }
+
+  .container__Section-Statistics .container__Content {
+  padding: 5.75rem 0 0 0;
+}
 
   .container__Title {
     font-size: 2.2rem;
@@ -123,6 +127,10 @@
     line-height: 1.75;
     padding: 0;
     margin: 0 auto 98px auto;
+  }
+
+  .container__List-Urls-Shortened {
+    padding: 0 72.3px 0 72.3px;
   }
 }
 
@@ -141,6 +149,10 @@
   .container__Connection-Bar:nth-child(4) {
     height: 8px;
     width: 30px;
-    margin: auto 0;
+    margin: 152px 0 0 0;
+  }
+
+  .container__Item-Shortened:nth-child(-n + 2) {
+    margin-bottom: 16px;
   }
 }

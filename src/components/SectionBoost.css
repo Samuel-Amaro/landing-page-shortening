@@ -36,3 +36,15 @@
     background-position: right;
   }
 }
+
+@media screen and (min-width: 780px) {
+  .container__Section-Boost {
+    padding: 62px 0 57px 0;
+    background-image: url(../images/bg-boost-desktop.svg);
+  }
+
+  .container__Section-Boost .container__Title {
+    font-size: 2.2rem;
+    margin-bottom: 29px;
+  }
+}

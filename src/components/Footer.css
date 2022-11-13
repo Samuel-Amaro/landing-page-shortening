@@ -124,11 +124,13 @@
 @media screen and (min-width: 780px) {
   .Footer {
     gap: 0px;
+    padding: 71px 15px 72px 15px;
   }
   
   .footer__Navs {
     gap: 0;
     margin-right: 50px; /*102px*/
+    margin-top: 4px;
   }
 
   .footer__Block-Nav:nth-child(1) {
@@ -150,7 +152,7 @@
 
 @media screen and (min-width: 1135px) {
   .Footer{
-    padding: 54px 0;
+    padding: 71px 0px 72px 0px;
   }
 
   .footer__Navs {

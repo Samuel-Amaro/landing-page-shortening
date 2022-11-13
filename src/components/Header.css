@@ -416,7 +416,6 @@
   }
 
   /*******************************content**************************/
-  /*TODO: encontrar melhor forma de centralizar o grid conteiner apos passar os 1440px*/
   .header__Ilustration {
     grid-area: a;
     background-position: center center;
@@ -477,5 +476,6 @@
 @media screen and (min-width: 1440px) {
   .header__Group:nth-child(2) {
     margin: 0 0 0 158px;
+    justify-content: center;
   }
 }
