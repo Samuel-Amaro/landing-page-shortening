@@ -247,7 +247,7 @@
 @media screen and (min-width: 780px) {
   /***********menu navigation********************/
   .Header {
-    padding: 3.03rem 0 9.34rem 0;
+    padding: 3.03rem 0 8.7rem 0;
   }
 
   .header__Group:first-of-type {
@@ -416,20 +416,19 @@
   }
 
   /*******************************content**************************/
-
   /*TODO: encontrar melhor forma de centralizar o grid conteiner apos passar os 1440px*/
   .header__Ilustration {
     grid-area: a;
-    background-position: left center;
-    background-size: auto;/*contain*/
+    background-position: center center;
+    background-size: auto; /*contain*/
     width: 100%;
-    height: 480px;
+    height: 482px;
     margin-bottom: 20px;
   }
 
   .header__Content {
     grid-area: b;
-    max-width: 580px;
+    max-width: 565px;
     margin: 0 auto;
   }
 
@@ -437,7 +436,7 @@
     font-size: 4.45rem;
     text-align: left;
     letter-spacing: -2px;
-    max-width: 580px;
+    max-width: 565px;
     line-height: 1.12;
     margin: 0 0 0px 0;
   }
@@ -461,15 +460,22 @@
   }
 
   .header__Ilustration {
+    background-position: left center;
     margin-bottom: 0px;
   }
 
   .header__Group:nth-child(2) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: minmax(min-content, 580px) minmax(min-content, 733px);
     grid-template-areas: "b a";
     align-items: center;
-    column-gap: 35px;
-    margin: 0 0 0 139px;
+    column-gap: 90px;
+    margin: 0 0 0 10px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header__Group:nth-child(2) {
+    margin: 0 0 0 158px;
   }
 }

@@ -54,7 +54,7 @@
 
 @media screen and (min-width: 780px) {
   .Card {
-    padding: 80px 32px 44px 32px;
+    padding: 80px 32px 46px 32px;
   }
 
   .card__Icon-Ilustration {
@@ -64,7 +64,17 @@
     margin: 0;
   }
 
+  .card__Title {
+    font-size: 1.24rem;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+
   .card__description {
+    font-size: 0.83rem;
+    line-height: 1.6;
+    text-align: center;
+    padding: 0 28px;
     padding: 0;
   }
 
