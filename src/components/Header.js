@@ -3,17 +3,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
 import React, {useRef, useState} from "react";
+import Form from "./Form";
 
-export default function Header() {
+export default function Header(props) {
     const nav = useRef(null);
     const liItemFocused = useRef(null);
     const btnMenu = useRef(null);
     const [btnIsPressed, setBtnIsPressed] = useState(false);
-    const [valueInput, setValueInput] = useState('');
+    
     const [classNamesNav, setClassNameNav] = useState(
       "header__Container-Collapse header__Container"
     );
-    const [formIsValid, setFormIsValid] = useState(true);
+
 
     function focusItem() {
       btnMenu.current.blur();
@@ -58,21 +59,6 @@ export default function Header() {
         );
         return !previosState;
       });
-    }
-
-    function handleChangeInput(event) {
-      setValueInput(event.target.value);
-    }
-
-    function handleSubmitForm(event) {
-      event.preventDefault();
-      if (valueInput === "") {
-        setFormIsValid(false);
-      }
-
-      if(valueInput !== "" && valueInput.length > 0) {
-        setFormIsValid(true);
-      }
     }
 
     return (
@@ -180,42 +166,7 @@ export default function Header() {
             </button>
           </section>
         </div>
-        <form
-          action=""
-          name="form"
-          className={formIsValid === false ? "Form Form_Invalid" : "Form"}
-          aria-label="Form from shorten a link here"
-          onSubmit={(event) => handleSubmitForm(event)}
-        >
-          <div className="form__Group">
-            <input
-              type="url"
-              placeholder="Shorten a link here..."
-              className={
-                formIsValid === false
-                  ? "form__Input form__Input_Invalid"
-                  : "form__Input"
-              }
-              aria-label="Shorten a link here... enter a url formatted like: 'urlscheme://restofurl"
-              title="Please enter a url formatted like: 'urlscheme://restofurl'"
-              value={valueInput}
-              onChange={(event) => handleChangeInput(event)}
-            />
-            {/*se o input estiver vazio add o alert*/}
-            {formIsValid ? (
-              ""
-            ) : (
-              <span className="form__Label-Warning" role="alert">Please add a link</span>
-            )}
-            <button
-              type="submit"
-              className="form__btn"
-              title="Submite url to shorten"
-            >
-              Shorten It!
-            </button>
-          </div>
-        </form>
+        <Form setUrlsShorteneds={props.setUrlsShorteneds} />
       </header>
     );
 }

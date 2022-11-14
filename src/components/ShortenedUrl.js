@@ -6,6 +6,7 @@ export default function ShortenedUrl(props) {
 
     function handleBtn() {
       setBtnPressed(true);
+      navigator.clipboard.writeText(props.urlShortened);
     }
 
     return (

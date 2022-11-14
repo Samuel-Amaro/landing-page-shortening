@@ -47,9 +47,12 @@
 .container__List-Urls-Shortened {
   list-style: none;
   margin-bottom: 1.21rem;
+  max-height: 512px;
+  overflow-y: auto;
+  scrollbar-width: 5px;
 }
 
-.container__Item-Shortened:nth-child(-n + 2) {
+.container__Item-Shortened{
   margin-bottom: 24px;
 }
 
@@ -131,6 +134,7 @@
 
   .container__List-Urls-Shortened {
     padding: 0 72.3px 0 72.3px;
+    max-height: 264px;
   }
 }
 
