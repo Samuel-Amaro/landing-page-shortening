@@ -49,7 +49,18 @@
   margin-bottom: 1.21rem;
   max-height: 512px;
   overflow-y: auto;
-  scrollbar-width: 5px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--cyan) #f0f1f6;
+}
+
+.container__List-Urls-Shortened::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+}
+
+.container__List-Urls-Shortened::-webkit-scrollbar-thumb{
+  background-color: var(--cyan);
+  border-radius: 6px;
 }
 
 .container__Item-Shortened{
