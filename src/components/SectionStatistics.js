@@ -18,6 +18,8 @@ export default function SectionStatistics(props) {
         <ul
           className="container__List-Urls-Shortened"
           aria-label="List from Urls shortened"
+          aria-live="assertive"
+          aria-atomic="true"
         >
           {props.urlsShorteneds.map((item, index) => {
             let splits = item.split(",");
