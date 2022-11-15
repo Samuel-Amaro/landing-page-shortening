@@ -1,7 +1,7 @@
 import Card from "./Card";
-import iconRecognition from "../images/icon-brand-recognition.svg";
-import iconRecords from "../images/icon-detailed-records.svg";
-import iconFully from "../images/icon-fully-customizable.svg";
+import iconRecognition from "../images/icon-recognition.svg";
+import iconRecords from "../images/icon-records.svg";
+import iconFully from "../images/icon-customizable.svg";
 import "./SectionStatistics.css";
 import ShortenedUrl from "./ShortenedUrl";
 import React from "react";
