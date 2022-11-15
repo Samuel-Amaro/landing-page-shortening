@@ -62,6 +62,7 @@ Users should be able to:
 - JavaScript Language Programming
   - fetch API networks request
   - API Clipboard clipboard's contents.
+  - [Regex URL](https://uibakery.io/regex-library/url) - Regex URL to validator
 - [shrtcode API](https://app.shrtco.de/) - shrtcode API to shortened from urls
 
 ### Getting Started with Create React App
