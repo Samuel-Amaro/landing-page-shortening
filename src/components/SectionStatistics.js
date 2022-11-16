@@ -22,7 +22,9 @@ export default function SectionStatistics(props) {
           aria-atomic="true"
         >
           {props.urlsShorteneds.map((item, index) => {
-            let splits = item.split(",");
+            //console.log(item.join().split(","));
+            //let splits = item.split(",");
+            let splits = item.join(",").split(",");
             return (
               <li className="container__Item-Shortened" key={index}>
                 <ShortenedUrl oldUrl={splits[1]} urlShortened={splits[0]} />
