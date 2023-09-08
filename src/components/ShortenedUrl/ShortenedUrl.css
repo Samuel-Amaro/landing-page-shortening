@@ -1,0 +1,104 @@
+.Result-Shortened-Url {
+  background-color: white;
+  max-width: 327px;
+  margin: 0 auto;
+  padding: 0 0 16px 0;
+  border-radius: 5px;
+  transition: all 0.35s ease;
+}
+
+.result-shortened-url__Old-Url,
+.result-shortened-url__Url-Shortened,
+.result-shortened-url__Btn {
+  display: block;
+}
+
+.result-shortened-url__Old-Url,
+.result-shortened-url__Url-Shortened {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 16px 16px 13.5px 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.result-shortened-url__Url-Shortened:nth-child(2) {
+  padding: 16px 16px 15px 16px;
+}
+
+.result-shortened-url__Old-Url {
+  color: var(--very-dark-blue);
+  border-bottom: 1px solid #f0f1f6;
+}
+
+.result-shortened-url__Url-Shortened {
+  color: var(--cyan);
+}
+
+.result-shortened-url__Btn {
+  appearance: none;
+  border: none;
+  background-color: var(--cyan);
+  color: white;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 9px 0 8px 0;
+  width: 91%;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.result-shortened-url__Btn:is(:hover, :focus) {
+  background-color: #9be2e2;
+}
+
+.result-shortened-url__Btn_Bg--Dark-Violet {
+  transition: background-color 0.25s ease;
+  background-color: var(--dark-violet);
+}
+
+.result-shortened-url__Btn_Bg--Dark-Violet:is(:hover, :focus){
+  opacity: 0.7;
+}
+
+@media screen and (min-width: 780px) {
+  .Result-Shortened-Url {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    max-width: 1108px;
+    margin: 0 auto 0 auto;
+    padding: 16px 24px 16px 32px;
+    gap: 24px;
+  }
+
+  .result-shortened-url__Old-Url {
+    color: var(--very-dark-blue);
+    border-bottom: none;
+  }
+
+  .result-shortened-url__Url-Shortened:nth-child(2) {
+    padding: 0 0px 3px 0;
+  }
+
+  .result-shortened-url__Old-Url,
+  .result-shortened-url__Url-Shortened {
+    font-size: 1.1rem;
+  }
+
+  .result-shortened-url__Btn {
+    font-size: 0.85rem;
+    padding: 9px 0 8px 0;
+    width: 104px;
+    margin: 0;
+  }
+
+  .result-shortened-url__Old-Url {
+    flex: 2 2 auto;
+    padding: 0 0 3px 0;
+  }
+}
