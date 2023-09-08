@@ -130,7 +130,7 @@ export default function Header(props) {
           type="button"
           className="header__Btn-Menu"
           title="Expanded Menu"
-          aria-expanded={btnIsPressed ? "false" : "true"}
+          aria-expanded={btnIsPressed ? "true" : "false"}
           onPointerDown={handleBtnMenu}
           onKeyDown={(event) => {
             if (event.code === "Enter") {
