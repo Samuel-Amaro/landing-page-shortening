@@ -26,7 +26,7 @@ export default function SectionStatistics(props) {
             //let splits = item.split(",");
             let splits = item.join(",").split(",");
             return (
-              <li className="container__Item-Shortened" key={index}>
+              <li className="container__Item-Shortened" key={index} data-testid="item-list">
                 <ShortenedUrl oldUrl={splits[1]} urlShortened={splits[0]} />
               </li>
             );
