@@ -19,6 +19,8 @@ export default function Form(props) {
       if (regexUrl.test(valueInput)) {
         setFormIsValid(true);
         shortenUrl(valueInput, props.setUrlsShorteneds);
+      } else {
+        setFormIsValid(false);
       }
     }
   }
@@ -50,9 +52,7 @@ export default function Form(props) {
           onChange={(event) => handleChangeInput(event)}
         />
         {/*se o input estiver vazio add o alert*/}
-        {formIsValid ? (
-          ""
-        ) : (
+        {!formIsValid && (
           <span className="form__Label-Warning" role="alert">
             Please add a link
           </span>
