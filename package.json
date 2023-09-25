@@ -44,6 +44,7 @@
   },
   "homepage": "https://Samuel-Amaro.github.io/landing-page-shortening/",
   "devDependencies": {
-    "@testing-library/user-event": "^14.4.3"
+    "@testing-library/user-event": "^14.4.3",
+    "msw": "^1.3.1"
   }
 }
